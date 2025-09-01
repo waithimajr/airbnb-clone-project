@@ -20,7 +20,6 @@ The project is designed to help understand and practice:
 - Design and develop a front-end (static and dynamic).
 - Integrate all components to create a functional AirBnB clone.
 
----
 
 ## Technology Stack
 
@@ -38,14 +37,13 @@ The project is designed to help understand and practice:
 - **JavaScript**: Enables interactivity and dynamic content updates on the client side.  
 
 ### **Version Control**
-- **Git & GitHub**: For source code management, collaboration, and version control.  
+- **Git & GitHub**: For source code management, collaboration, and version control. 
 
 ### **Deployment (TBD)**
 - **Docker**: Containerization tool for consistent environments across development and production.  
 - **Nginx / Gunicorn**: Web server and WSGI server to serve the app efficiently.  
 - **Heroku / AWS**: Potential cloud platforms for hosting and deployment.  
 
----
 
 ## Repository Structure
 airbnb-clone-project/
@@ -106,7 +104,7 @@ Represents transactions for bookings.
 - **payment_date**
 - **status** (paid, pending, failed)
 
----
+
 
 ### **Entity Relationships**
 - A **User** can be both a **host** (owns Properties) and a **guest** (makes Bookings).  
@@ -115,10 +113,4 @@ Represents transactions for bookings.
 - A **Review** is written by a **User** (guest) for a **Property** after a Booking.  
 - A **Payment** is associated with a **Booking**.  
 
----
 
-### Example ERD (Entity Relationship Diagram) Concept
-User (1) ---- (M) Property
-User (1) ---- (M) Booking ---- (1) Property
-Booking (1) ---- (1) Payment
-User (1) ---- (M) Review ---- (1) Property
