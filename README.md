@@ -56,3 +56,69 @@ airbnb-clone-project/
 │── web_static/ # Front-end static files
 │── api/ # RESTful API
 │── ...
+
+
+## Database Design
+
+The database is designed to support the core functionality of the AirBnB Clone, ensuring data consistency and scalability.
+
+### **Key Entities**
+
+#### 1. Users
+Represents people who use the platform (hosts and guests).
+- **id** (Primary Key)
+- **name**
+- **email**
+- **password_hash**
+- **role** (guest, host, admin)
+
+#### 2. Properties
+Represents listings created by hosts.
+- **id** (Primary Key)
+- **host_id** (Foreign Key → Users.id)
+- **title**
+- **description**
+- **location**
+- **price_per_night**
+
+#### 3. Bookings
+Represents reservations made by guests.
+- **id** (Primary Key)
+- **user_id** (Foreign Key → Users.id)
+- **property_id** (Foreign Key → Properties.id)
+- **check_in_date**
+- **check_out_date**
+- **status** (pending, confirmed, cancelled)
+
+#### 4. Reviews
+Represents feedback left by guests after a booking.
+- **id** (Primary Key)
+- **user_id** (Foreign Key → Users.id)
+- **property_id** (Foreign Key → Properties.id)
+- **rating** (1–5 stars)
+- **comment**
+
+#### 5. Payments
+Represents transactions for bookings.
+- **id** (Primary Key)
+- **booking_id** (Foreign Key → Bookings.id)
+- **amount**
+- **payment_date**
+- **status** (paid, pending, failed)
+
+---
+
+### **Entity Relationships**
+- A **User** can be both a **host** (owns Properties) and a **guest** (makes Bookings).  
+- A **Property** belongs to a **User** (host).  
+- A **Booking** belongs to both a **User** (guest) and a **Property**.  
+- A **Review** is written by a **User** (guest) for a **Property** after a Booking.  
+- A **Payment** is associated with a **Booking**.  
+
+---
+
+### Example ERD (Entity Relationship Diagram) Concept
+User (1) ---- (M) Property
+User (1) ---- (M) Booking ---- (1) Property
+Booking (1) ---- (1) Payment
+User (1) ---- (M) Review ---- (1) Property
