@@ -104,8 +104,6 @@ Represents transactions for bookings.
 - **payment_date**
 - **status** (paid, pending, failed)
 
-
-
 ### **Entity Relationships**
 - A **User** can be both a **host** (owns Properties) and a **guest** (makes Bookings).  
 - A **Property** belongs to a **User** (host).  
@@ -113,4 +111,36 @@ Represents transactions for bookings.
 - A **Review** is written by a **User** (guest) for a **Property** after a Booking.  
 - A **Payment** is associated with a **Booking**.  
 
+## Feature Breakdown
 
+### 1. User Management
+Allows users to register, log in, and manage their profiles.  
+Users can act as **hosts** (listing properties) or **guests** (booking properties). This feature ensures secure authentication and role-based functionality.  
+
+### 2. Property Management
+Hosts can create, update, and delete property listings.  
+Each property includes details like title, description, location, price, and availability, making it easy for guests to find suitable accommodations.  
+
+### 3. Booking System
+Guests can search for properties, check availability, and make reservations.  
+The booking system manages check-in/check-out dates, booking status (pending, confirmed, cancelled), and ensures no double-bookings occur.  
+
+### 4. Review System
+Guests can leave reviews and ratings for properties after completing a stay.  
+This builds trust on the platform, helping other guests make informed decisions and motivating hosts to maintain quality standards.  
+
+### 5. Payment System
+Enables guests to securely pay for their bookings.  
+Payments are linked to bookings, with statuses like paid, pending, or failed, ensuring clear tracking of financial transactions.  
+
+### 6. Search and Filtering
+Guests can search for properties by location, price, dates, and amenities.  
+This feature improves usability by helping users quickly find the most relevant listings.  
+
+### 7. API Endpoints
+RESTful APIs handle communication between the front-end and back-end.  
+They make it possible for external clients or future mobile apps to interact with the system efficiently.  
+
+### 8. Front-End Interface
+A responsive web interface allows users to browse properties, manage bookings, and interact with the system easily.  
+Built with HTML, CSS, and JavaScript, it provides an intuitive experience for both guests and hosts.  
