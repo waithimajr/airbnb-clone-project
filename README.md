@@ -143,4 +143,42 @@ They make it possible for external clients or future mobile apps to interact wit
 
 ### 8. Front-End Interface
 A responsive web interface allows users to browse properties, manage bookings, and interact with the system easily.  
-Built with HTML, CSS, and JavaScript, it provides an intuitive experience for both guests and hosts.  
+Built with HTML, CSS, and JavaScript, it provides an intuitive experience for both guests and hosts. 
+
+## API Security
+
+Securing the backend APIs is critical for protecting sensitive user information, ensuring safe transactions, and maintaining the overall trust of the platform.  
+
+### **Key Security Measures**
+
+#### 1. Authentication
+- **What it is:** Ensures that only verified users can access the system by requiring login credentials (e.g., email + password) or tokens (JWT).  
+- **Why it matters:** Protects user accounts and prevents unauthorized access to personal data, bookings, and payments.  
+
+#### 2. Authorization
+- **What it is:** Determines what actions an authenticated user is allowed to perform. For example, a host can manage properties, but only a guest can make bookings.  
+- **Why it matters:** Prevents privilege escalation and ensures that users only perform actions appropriate to their role.  
+
+#### 3. Data Encryption
+- **What it is:** Encrypts sensitive data (e.g., passwords, payment information) both in transit (HTTPS/SSL) and at rest (database encryption).  
+- **Why it matters:** Protects user credentials, personal details, and financial transactions from being intercepted or stolen.  
+
+#### 4. Rate Limiting & Throttling
+- **What it is:** Restricts the number of requests a client can make in a given period.  
+- **Why it matters:** Prevents abuse of APIs, denial-of-service attacks, and protects system performance.  
+
+#### 5. Input Validation & Sanitization
+- **What it is:** Ensures that all input data (e.g., form submissions, API requests) is checked and cleaned before processing.  
+- **Why it matters:** Prevents common vulnerabilities such as SQL injection, cross-site scripting (XSS), and command injection.  
+
+#### 6. Secure Payment Handling
+- **What it is:** Uses secure third-party payment gateways and tokenization to handle financial transactions.  
+- **Why it matters:** Protects sensitive payment details and ensures compliance with standards like PCI-DSS.  
+
+---
+
+### **Why Security is Crucial**
+- **Protecting User Data:** Safeguards sensitive information such as personal details, passwords, and bookings.  
+- **Securing Payments:** Ensures that financial transactions are processed safely without leaks or fraud.  
+- **Maintaining Trust:** Builds user confidence in the platform, which is essential for adoption and growth.  
+- **Compliance:** Meets legal and industry requirements for data protection (e.g., GDPR, PCI compliance).  
