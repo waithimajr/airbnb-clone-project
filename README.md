@@ -56,9 +56,3 @@ airbnb-clone-project/
 │── web_static/ # Front-end static files
 │── api/ # RESTful API
 │── ...
-
-markdown
-Copy code
-
-## Author(s)
-- [Your Name](https://github.com/your-github-username)
