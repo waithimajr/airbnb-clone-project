@@ -182,3 +182,24 @@ Securing the backend APIs is critical for protecting sensitive user information,
 - **Securing Payments:** Ensures that financial transactions are processed safely without leaks or fraud.  
 - **Maintaining Trust:** Builds user confidence in the platform, which is essential for adoption and growth.  
 - **Compliance:** Meets legal and industry requirements for data protection (e.g., GDPR, PCI compliance).  
+
+## CI/CD Pipeline
+
+### **What is CI/CD?**
+CI/CD stands for **Continuous Integration (CI)** and **Continuous Deployment/Delivery (CD)**.  
+It is a development practice that automates the process of testing, building, and deploying applications.  
+
+- **Continuous Integration (CI):** Ensures that code changes are automatically tested and merged into the main branch without breaking the application.  
+- **Continuous Deployment (CD):** Automates the release process so that new features and fixes are delivered to users quickly and reliably.  
+
+### **Why it is Important for the Project**
+- **Faster Development:** Automates repetitive tasks like testing and deployment, speeding up the release cycle.  
+- **Improved Quality:** Runs automated tests on every commit to catch bugs early before they reach production.  
+- **Consistency:** Ensures the application works the same way across different environments (development, staging, production).  
+- **Reliability:** Reduces human error by using automation for builds, tests, and deployments.  
+
+### **Tools to Use**
+- **GitHub Actions:** For automating workflows such as running tests and deploying code on every push or pull request.  
+- **Docker:** For containerizing the application, ensuring consistent environments during development and production.  
+- **Jenkins / GitLab CI:** Alternative CI/CD tools that can be integrated if more flexibility is needed.  
+- **Heroku / AWS / DigitalOcean:** Hosting platforms where automated deployments can be made.  
